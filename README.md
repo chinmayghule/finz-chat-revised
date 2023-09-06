@@ -1,1 +1,1 @@
-Use `Ctrl + D` to toggle light/dark theme.
+Use `Ctrl + Alt + D` to toggle light/dark theme.
