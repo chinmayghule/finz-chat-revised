@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ShowPasswordIcon from "../shared/ShowPasswordIcon";
+import HidePasswordIcon from "../shared/HidePasswordIcon";
 
 function SignupForm() {
 
@@ -47,12 +49,12 @@ function SignupForm() {
           />
           <button
             className="show-password"
-            onClick={() => setShowPassword(prevValue => !prevValue)}
+            onClick={(e) => {
+              e.preventDefault();
+              setShowPassword(prevValue => !prevValue);
+            }}
           >
-            <img
-              src="show-password.svg"
-              alt='show password'
-            />
+            {(showPassword) ? <HidePasswordIcon /> : <ShowPasswordIcon />}
           </button>
         </div>
       </section>
@@ -74,12 +76,12 @@ function SignupForm() {
           />
           <button
             className="show-password"
-            onClick={() => setShowConfirmPassword(prevValue => !prevValue)}
+            onClick={(e) => {
+              e.preventDefault();
+              setShowConfirmPassword(prevValue => !prevValue);
+            }}
           >
-            <img
-              src="show-password.svg"
-              alt='show password'
-            />
+            {(showConfirmPassword) ? <HidePasswordIcon /> : <ShowPasswordIcon />}
           </button>
         </div>
       </section>

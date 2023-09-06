@@ -12,11 +12,11 @@ body {
 *, ::before, ::after { border-width: 0; }
 
 .signup-page-container {
-  @apply grid justify-center items-center min-h-screen bg-c-bg-clr py-0;
+  @apply grid justify-center items-center min-h-screen bg-white dark:bg-c-bg-clr py-0;
 }
 
 .signup-wrapper {
-  @apply w-screen max-w-sm max-h-fit border-2 border-black px-[1.125rem] py-8 lg:py-0;
+  @apply w-screen max-w-sm max-h-fit px-[1.125rem] py-8 lg:py-0;
 }
 
 .signup-form {
@@ -24,7 +24,7 @@ body {
 }
 
 .signup-title {
-  @apply text-3xl text-white font-bold leading-10 mb-[2.38rem];
+  @apply text-3xl text-black dark:text-white font-bold leading-10 mb-[2.38rem];
 }
 
 .signup-form-inputgroup {
@@ -32,15 +32,15 @@ body {
 }
 
 .signup-label {
-  @apply text-white text-sm font-normal leading-none;
+  @apply dark:text-white text-sm font-normal leading-none;
 }
 
 .input-with-element {
-  @apply w-full flex flex-row gap-[0.69rem] bg-c-bg-clr-secondary px-4 py-[1.125rem] border-2 border-transparent;
+  @apply w-full flex flex-row gap-[0.69rem] bg-gray-100 dark:bg-c-bg-clr-secondary px-4 py-[1.125rem] border-2 border-transparent rounded-[0.625rem];
 }
 
 .input-with-element:focus-within {
-  @apply border-2 border-white;
+  @apply border-2 border-black dark:border-white;
 }
 
 .input-with-element:has(.show-password:focus-visible) {
@@ -48,7 +48,7 @@ body {
 }
 
 .signup-input {
-  @apply bg-inherit border-0 border-none border-transparent font-inter text-base text-white text-opacity-100 font-normal leading-tight flex-1;
+  @apply bg-inherit border-0 border-none border-transparent font-inter text-base dark:text-white text-opacity-100 font-normal leading-tight flex-1;
 }
 
 .signup-input:focus-visible {
@@ -60,7 +60,7 @@ body {
 }
 
 .signup-btn {
-  @apply mt-[2.38rem] py-4 bg-indigo-600 rounded-lg text-center text-white text-base font-semibold leading-tight;
+  @apply mt-[2.38rem] py-4 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-center hover:text-gray-100 text-white text-base font-semibold leading-tight;
 }
 
 .signin-other-options-container {
@@ -68,7 +68,7 @@ body {
 }
 
 .signin-other-options-text {
-  @apply text-white text-opacity-70 text-sm font-normal leading-none text-center;
+  @apply dark:text-white text-opacity-70 text-sm font-normal leading-none text-center;
 }
 
 .signin-other-options-btn-container {
@@ -80,9 +80,9 @@ body {
 }
 
 .signup-hint {
-  @apply text-white text-opacity-70 text-sm font-normal leading-none text-center mt-[3.25rem];
+  @apply dark:text-white text-opacity-70 text-sm font-normal leading-none text-center mt-[3.25rem];
 }
 
 .signup-hint-link {
-  @apply text-white text-sm font-semibold leading-none;
+  @apply dark:text-white text-sm font-semibold leading-none;
 }
