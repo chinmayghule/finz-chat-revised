@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply leading-[normal] m-0;
+}
+*, ::before, ::after { border-width: 0; }
+
+.signup-page-container {
+  @apply grid justify-center items-center min-h-screen bg-c-bg-clr py-0;
+}
+
+.signup-wrapper {
+  @apply w-screen max-w-sm max-h-fit border-2 border-black px-[1.125rem] py-8 lg:py-0;
+}
+
+.signup-form {
+  @apply flex flex-col gap-[1.38rem];
+}
+
+.signup-title {
+  @apply text-3xl text-white font-bold leading-10 mb-[2.38rem];
+}
+
+.signup-form-inputgroup {
+  @apply flex flex-col gap-1.5 rounded-[0.625rem];
+}
+
+.signup-label {
+  @apply text-white text-sm font-normal leading-none;
+}
+
+.input-with-element {
+  @apply w-full flex flex-row gap-[0.69rem] bg-c-bg-clr-secondary px-4 py-[1.125rem] border-2 border-transparent;
+}
+
+.input-with-element:focus-within {
+  @apply border-2 border-white;
+}
+
+.input-with-element:has(.show-password:focus-visible) {
+  @apply border-transparent;
+}
+
+.signup-input {
+  @apply bg-inherit border-0 border-none border-transparent font-inter text-base text-white text-opacity-100 font-normal leading-tight flex-1;
+}
+
+.signup-input:focus-visible {
+  @apply border-0 border-none border-transparent outline-0 outline-none;
+}
+
+.signup-padding {
+  @apply px-4 py-[1.125rem];
+}
+
+.signup-btn {
+  @apply mt-[2.38rem] py-4 bg-indigo-600 rounded-lg text-center text-white text-base font-semibold leading-tight;
+}
+
+.signin-other-options-container {
+  @apply mt-[3.19rem];
+}
+
+.signin-other-options-text {
+  @apply text-white text-opacity-70 text-sm font-normal leading-none text-center;
+}
+
+.signin-other-options-btn-container {
+  @apply flex flex-row gap-3 mt-4 justify-center;
+}
+
+.signin-logo-btn {
+  @apply p-[1.125rem];
+}
+
+.signup-hint {
+  @apply text-white text-opacity-70 text-sm font-normal leading-none text-center mt-[3.25rem];
+}
+
+.signup-hint-link {
+  @apply text-white text-sm font-semibold leading-none;
+}
