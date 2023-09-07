@@ -8,6 +8,13 @@ function App() {
     setIsDarkThemeEnabled
   ] = useState(true);
 
+  const [
+    isViewportLessThan480,
+    setIsViewportLessThan480
+  ] = useState(window.innerWidth <= 480);
+
+
+  // toggle light/dark theme.
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.ctrlKey && e.altKey && (e.key === 'd' || e.key === 'D')) {
@@ -22,9 +29,27 @@ function App() {
 
   }, []);
 
+  // check for viewport size.
+  useEffect(() => {
+    const isViewportWidthSmall = () => {
+      console.log(isViewportLessThan480);
+      setIsViewportLessThan480(window.innerWidth <= 480);
+    };
+
+    window.addEventListener('resize', isViewportWidthSmall);
+
+    return () => window.removeEventListener('resize', isViewportWidthSmall);
+
+  }, []);
+
+
 
   return (
-    <Theme.Provider value={{ isDarkThemeEnabled, setIsDarkThemeEnabled }}>
+    <Theme.Provider value={{
+      isDarkThemeEnabled,
+      setIsDarkThemeEnabled,
+      isViewportLessThan480
+    }}>
       <SignUp />
     </Theme.Provider>
   );

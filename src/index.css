@@ -12,11 +12,11 @@ body {
 *, ::before, ::after { border-width: 0; }
 
 .signup-page-container {
-  @apply grid justify-center items-center min-h-screen bg-white dark:bg-c-bg-clr py-0;
+  @apply grid justify-center items-center min-h-screen bg-gray-200 sm:bg-white dark:bg-c-bg-clr sm:dark:bg-black py-0;
 }
 
 .signup-wrapper {
-  @apply w-screen max-w-sm max-h-fit px-[1.125rem] py-8 lg:py-0;
+  @apply w-screen max-w-sm max-h-fit max-[320px]:px-5 px-[2.9rem] bg-gray-200 dark:bg-c-bg-clr py-10 sm:rounded-[2.19rem] sm:my-[2.5rem];
 }
 
 .signup-form {
@@ -36,7 +36,7 @@ body {
 }
 
 .input-with-element {
-  @apply w-full flex flex-row gap-[0.69rem] bg-gray-100 dark:bg-c-bg-clr-secondary px-4 py-[1.125rem] border-2 border-transparent rounded-[0.625rem];
+  @apply w-full max-w-full flex flex-row gap-[0.69rem] bg-gray-100 dark:bg-c-bg-clr-secondary px-4 py-[1.125rem] border-2 border-transparent rounded-[0.625rem];
 }
 
 .input-with-element:focus-within {
@@ -48,11 +48,14 @@ body {
 }
 
 .signup-input {
-  @apply bg-inherit border-0 border-none border-transparent font-inter text-base dark:text-white text-opacity-100 font-normal leading-tight flex-1;
+  @apply bg-inherit border-0 border-none border-transparent font-inter text-base dark:text-white text-opacity-100 font-normal leading-tight min-w-0;
 }
 
 .signup-input:focus-visible {
   @apply border-0 border-none border-transparent outline-0 outline-none;
+}
+
+.show-password {
 }
 
 .signup-padding {
@@ -75,12 +78,36 @@ body {
   @apply flex flex-row gap-3 mt-4 justify-center;
 }
 
+.signin-other-options-container-large {
+  @apply mt-[3.5rem];
+}
+
+.signin-divider-container {
+  @apply flex flex-row gap-[1.19rem] justify-center items-center mb-[1.37rem];
+}
+
+.signin-divider {
+  @apply h-[1px] border-t-black border border-black opacity-[0.7] flex-1;
+}
+
 .signin-logo-btn {
   @apply p-[1.125rem];
 }
 
+.signin-options-btn-container-large {
+  @apply flex flex-col gap-4;
+}
+
+.signin-options-btn-large {
+  @apply py-[1.06rem] w-full flex flex-row gap-3 justify-center rounded-[0.625rem] bg-gray-100 dark:bg-c-bg-clr-secondary text-black dark:text-white;
+}
+
 .signup-hint {
   @apply dark:text-white text-opacity-70 text-sm font-normal leading-none text-center mt-[3.25rem];
+}
+
+.signup-hint-large {
+  @apply dark:text-white text-opacity-70 text-sm font-normal leading-none text-center mt-[1.38rem];
 }
 
 .signup-hint-link {
